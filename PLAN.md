@@ -104,10 +104,13 @@ This document outlines the development plan for creating the NestJS Termii SDK. 
 
     -   [x] Create example for `CampaignsService`.
 
-- [ ] **2.7: Conversations API (`ConversationsService`)**
-  - [ ] Implement Conversation methods (`list`, `toggleRead`, `send`)
-  - [ ] Write unit tests for `ConversationsService`.
-  - [ ] Create example for `ConversationsService`.
+-   [x] **2.7: Conversations API (`ConversationsService`)**
+
+    -   [x] Implement Conversation methods (`list`, `toggleRead`, `send`)
+
+    -   [x] Write unit tests for `ConversationsService`.
+
+    -   [x] Create example for `ConversationsService`.
 
 ## Phase 3: Documentation & Finalization
 

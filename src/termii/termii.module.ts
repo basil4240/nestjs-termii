@@ -10,7 +10,9 @@ import { InsightsService } from './insights.service';
 import { MessagingService } from './messaging.service';
 import { TokenService } from './token.service';
 import { SenderIdService } from './sender-id.service';
-import { ContactsService } from './contacts.service'; // Import ContactsService
+import { ContactsService } from './contacts.service';
+import { CampaignsService } from './campaigns.service';
+import { ConversationsService } from './conversations.service'; // Import ConversationsService
 
 @Global()
 @Module({})
@@ -26,14 +28,24 @@ export class TermiiModule {
       MessagingService,
       TokenService,
       SenderIdService,
-      ContactsService, // Add ContactsService
+      ContactsService,
+      CampaignsService,
+      ConversationsService, // Add ConversationsService
     ];
 
     return {
       module: TermiiModule,
       imports: [HttpModule],
       providers: providers,
-      exports: [InsightsService, MessagingService, TokenService, SenderIdService, ContactsService], // Export all services
+      exports: [
+        InsightsService,
+        MessagingService,
+        TokenService,
+        SenderIdService,
+        ContactsService,
+        CampaignsService,
+        ConversationsService, // Export ConversationsService
+      ],
     };
   }
 
@@ -49,14 +61,24 @@ export class TermiiModule {
       MessagingService,
       TokenService,
       SenderIdService,
-      ContactsService, // Add ContactsService
+      ContactsService,
+      CampaignsService,
+      ConversationsService, // Add ConversationsService
     ];
 
     return {
       module: TermiiModule,
       imports: [...(options.imports || []), HttpModule],
       providers: providers,
-      exports: [InsightsService, MessagingService, TokenService, SenderIdService, ContactsService], // Export all services
+      exports: [
+        InsightsService,
+        MessagingService,
+        TokenService,
+        SenderIdService,
+        ContactsService,
+        CampaignsService,
+        ConversationsService, // Export ConversationsService
+      ],
     };
   }
 }
