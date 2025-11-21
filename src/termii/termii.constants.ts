@@ -1,0 +1,1 @@
+export const TERmii_MODULE_OPTIONS = 'TERmii_MODULE_OPTIONS';
