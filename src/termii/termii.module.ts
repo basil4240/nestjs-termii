@@ -6,6 +6,7 @@ import {
 } from './interfaces/termii-options.interface';
 import { TERmii_MODULE_OPTIONS } from './termii.constants';
 import { TermiiHttpService } from './termii-http.service';
+import { InsightsService } from './insights.service'; // Import InsightsService
 
 @Global()
 @Module({})
@@ -17,13 +18,14 @@ export class TermiiModule {
         useValue: options,
       },
       TermiiHttpService,
+      InsightsService, // Add InsightsService
     ];
 
     return {
       module: TermiiModule,
       imports: [HttpModule],
       providers: providers,
-      exports: [TermiiHttpService],
+      exports: [InsightsService], // Export InsightsService (and other feature services later)
     };
   }
 
@@ -35,13 +37,14 @@ export class TermiiModule {
         inject: options.inject || [],
       },
       TermiiHttpService,
+      InsightsService, // Add InsightsService
     ];
 
     return {
       module: TermiiModule,
       imports: [...(options.imports || []), HttpModule],
       providers: providers,
-      exports: [TermiiHttpService],
+      exports: [InsightsService], // Export InsightsService (and other feature services later)
     };
   }
 }

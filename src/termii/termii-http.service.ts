@@ -27,8 +27,7 @@ export class TermiiHttpService {
     private readonly options: TermiiModuleOptions,
   ) {
     this.logger = this.options.logger;
-    this.baseUrl =
-      this.options.baseUrl || 'https://api.ng.termii.com';
+    this.baseUrl = this.options.baseUrl || 'https://api.ng.termii.com';
     this.apiKey = this.options.apiKey;
     this.senderId = this.options.senderId;
     this.timeout = this.options.timeout || 30000;
@@ -49,7 +48,9 @@ export class TermiiHttpService {
   ): Promise<R> {
     const fullUrl = `${this.baseUrl}/${url}`;
     const preparedPayload = this.preparePayload(payload);
-    this.logger?.log(`[Termii-SDK] POST ${fullUrl}, payload: ${JSON.stringify(preparedPayload)}`);
+    this.logger?.log(
+      `[Termii-SDK] POST ${fullUrl}, payload: ${JSON.stringify(preparedPayload)}`,
+    );
 
     const request = this.httpService
       .post<R>(fullUrl, preparedPayload, {
@@ -75,8 +76,12 @@ export class TermiiHttpService {
     config?: AxiosRequestConfig,
   ): Promise<R> {
     const fullUrl = `${this.baseUrl}/${url}`;
-    const params = payload ? this.preparePayload(payload) : { api_key: this.apiKey };
-    this.logger?.log(`[Termii-SDK] GET ${fullUrl}, params: ${JSON.stringify(params)}`);
+    const params = payload
+      ? this.preparePayload(payload)
+      : { api_key: this.apiKey };
+    this.logger?.log(
+      `[Termii-SDK] GET ${fullUrl}, params: ${JSON.stringify(params)}`,
+    );
 
     const request = this.httpService
       .get<R>(fullUrl, {
@@ -101,7 +106,7 @@ export class TermiiHttpService {
     if (error.response) {
       const { status, data } = error.response;
       const message = data?.message || 'An unknown error occurred';
-      
+
       switch (status) {
         case 401:
           throw new TermiiApiKeyInvalidException(message);
