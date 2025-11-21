@@ -22,7 +22,8 @@
     "example:messaging": "npx ts-node -r tsconfig-paths/register --project tsconfig.json examples/messaging-example.ts",
     "example:token": "npx ts-node -r tsconfig-paths/register --project tsconfig.json examples/token-example.ts",
     "example:sender-id": "npx ts-node -r tsconfig-paths/register --project tsconfig.json examples/sender-id-example.ts",
-    "example:contacts": "npx ts-node -r tsconfig-paths/register --project tsconfig.json examples/contacts-example.ts"
+    "example:contacts": "npx ts-node -r tsconfig-paths/register --project tsconfig.json examples/contacts-example.ts",
+    "example:campaigns": "npx ts-node -r tsconfig-paths/register --project tsconfig.json examples/campaigns-example.ts"
   },
   "dependencies": {
     "@nestjs/axios": "^4.0.1",
