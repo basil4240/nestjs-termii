@@ -6,7 +6,8 @@ import {
 } from './interfaces/termii-options.interface';
 import { TERmii_MODULE_OPTIONS } from './termii.constants';
 import { TermiiHttpService } from './termii-http.service';
-import { InsightsService } from './insights.service'; // Import InsightsService
+import { InsightsService } from './insights.service';
+import { MessagingService } from './messaging.service'; // Import MessagingService
 
 @Global()
 @Module({})
@@ -18,14 +19,15 @@ export class TermiiModule {
         useValue: options,
       },
       TermiiHttpService,
-      InsightsService, // Add InsightsService
+      InsightsService,
+      MessagingService, // Add MessagingService
     ];
 
     return {
       module: TermiiModule,
       imports: [HttpModule],
       providers: providers,
-      exports: [InsightsService], // Export InsightsService (and other feature services later)
+      exports: [InsightsService, MessagingService], // Export both services
     };
   }
 
@@ -37,14 +39,15 @@ export class TermiiModule {
         inject: options.inject || [],
       },
       TermiiHttpService,
-      InsightsService, // Add InsightsService
+      InsightsService,
+      MessagingService, // Add MessagingService
     ];
 
     return {
       module: TermiiModule,
       imports: [...(options.imports || []), HttpModule],
       providers: providers,
-      exports: [InsightsService], // Export InsightsService (and other feature services later)
+      exports: [InsightsService, MessagingService], // Export both services
     };
   }
 }

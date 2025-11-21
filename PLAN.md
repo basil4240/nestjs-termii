@@ -52,12 +52,17 @@ This document outlines the development plan for creating the NestJS Termii SDK. 
   - [x] Create example for `InsightsService`.
   - [ ] **2.1.7: Debug example execution issue**
 
-- [ ] **2.2: Messaging API (`MessagingService`)**
-  - [ ] Implement `sendMessage()`
-  - [ ] Implement `sendBulkMessage()`
-  - [ ] Implement `sendWithTemplate()`
-  - [ ] Write unit tests for `MessagingService`.
-  - [ ] Create example for `MessagingService`.
+-   [x] **2.2: Messaging API (`MessagingService`)**
+
+    -   [x] Implement `sendMessage()`
+
+    -   [x] Implement `sendBulkMessage()`
+
+    -   [x] Implement `sendWithTemplate()`
+
+    -   [x] Write unit tests for `MessagingService`.
+
+    -   [x] Create example for `MessagingService`.
 
 - [ ] **2.3: Token API (`TokenService`)**
   - [ ] Implement `sendToken()`
