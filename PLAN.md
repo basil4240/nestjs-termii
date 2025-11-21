@@ -50,7 +50,7 @@ This document outlines the development plan for creating the NestJS Termii SDK. 
   - [x] Implement `getHistory()`
   - [x] Write unit tests for `InsightsService`.
   - [x] Create example for `InsightsService`.
-  - [ ] **2.1.7: Debug example execution issue**
+  - [x] **2.1.7: Debug example execution issue**
 
 -   [x] **2.2: Messaging API (`MessagingService`)**
 
@@ -64,24 +64,37 @@ This document outlines the development plan for creating the NestJS Termii SDK. 
 
     -   [x] Create example for `MessagingService`.
 
-- [ ] **2.3: Token API (`TokenService`)**
-  - [ ] Implement `sendToken()`
-  - [ ] Implement `verifyToken()`
-  - [ ] Implement `inAppToken()`
-  - [ ] Write unit tests for `TokenService`.
-  - [ ] Create example for `TokenService`.
+-   [x] **2.3: Token API (`TokenService`)**
 
-- [ ] **2.4: Sender ID API (`SenderIdService`)**
-  - [ ] Implement `list()`
-  - [ ] Implement `request()`
-  - [ ] Write unit tests for `SenderIdService`.
-  - [ ] Create example for `SenderIdService`.
+    -   [x] Implement `sendToken()`
 
-- [ ] **2.5: Contacts API (`ContactsService`)**
-  - [ ] Implement Phonebook methods (`list`, `create`, `update`, `delete`)
-  - [ ] Implement Contact methods (`list`, `add`, `addBulk`, `delete`)
-  - [ ] Write unit tests for `ContactsService`.
-  - [ ] Create example for `ContactsService`.
+    -   [x] Implement `verifyToken()`
+
+    -   [x] Implement `inAppToken()`
+
+    -   [x] Write unit tests for `TokenService`.
+
+    -   [x] Create example for `TokenService`.
+
+-   [x] **2.4: Sender ID API (`SenderIdService`)**
+
+    -   [x] Implement `list()`
+
+    -   [x] Implement `request()`
+
+    -   [x] Write unit tests for `SenderIdService`.
+
+    -   [x] Create example for `SenderIdService`.
+
+-   [x] **2.5: Contacts API (`ContactsService`)**
+
+    -   [x] Implement Phonebook methods (`list`, `create`, `update`, `delete`)
+
+    -   [x] Implement Contact methods (`list`, `add`, `addBulk`, `delete`)
+
+    -   [x] Write unit tests for `ContactsService`.
+
+    -   [x] Create example for `ContactsService`.
 
 - [ ] **2.6: Campaigns API (`CampaignsService`)**
   - [ ] Implement Campaign methods (`fetch`, `history`, `send`)

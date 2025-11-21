@@ -7,7 +7,10 @@ import {
 import { TERmii_MODULE_OPTIONS } from './termii.constants';
 import { TermiiHttpService } from './termii-http.service';
 import { InsightsService } from './insights.service';
-import { MessagingService } from './messaging.service'; // Import MessagingService
+import { MessagingService } from './messaging.service';
+import { TokenService } from './token.service';
+import { SenderIdService } from './sender-id.service';
+import { ContactsService } from './contacts.service'; // Import ContactsService
 
 @Global()
 @Module({})
@@ -20,14 +23,17 @@ export class TermiiModule {
       },
       TermiiHttpService,
       InsightsService,
-      MessagingService, // Add MessagingService
+      MessagingService,
+      TokenService,
+      SenderIdService,
+      ContactsService, // Add ContactsService
     ];
 
     return {
       module: TermiiModule,
       imports: [HttpModule],
       providers: providers,
-      exports: [InsightsService, MessagingService], // Export both services
+      exports: [InsightsService, MessagingService, TokenService, SenderIdService, ContactsService], // Export all services
     };
   }
 
@@ -40,14 +46,17 @@ export class TermiiModule {
       },
       TermiiHttpService,
       InsightsService,
-      MessagingService, // Add MessagingService
+      MessagingService,
+      TokenService,
+      SenderIdService,
+      ContactsService, // Add ContactsService
     ];
 
     return {
       module: TermiiModule,
       imports: [...(options.imports || []), HttpModule],
       providers: providers,
-      exports: [InsightsService, MessagingService], // Export both services
+      exports: [InsightsService, MessagingService, TokenService, SenderIdService, ContactsService], // Export all services
     };
   }
 }
